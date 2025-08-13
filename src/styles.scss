@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bulma/css/bulma.css";
+
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Corben:wght@400;700&display=swap');
+
+/* Palette années 70/80 */
+:root {
+  --color-bleu-sombre: #1034a8;
+  --color-bleu-vif: #0180ff;
+  --color-bleu-pale: #6694f6;
+  --color-bleu-tres-pale: #73c3fa;
+  --color-vert-neon: #3ce1d0;
+  --color-black-text: #1c2954;
+  --color-white-background: #eaf6fe;
+}
+
+/* Styles globaux */
+body {
+
+  font-family: "Corben", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(15deg, var(--color-bleu-pale), var(--color-bleu-tres-pale));
+}
+
+p{
+  color: var(--color-black-text);
+  font-size: 15px;
+  
+}
+
+h1{
+  font-family: "Caprasimo", serif;
+  font-style: normal;
+  font-size: 55px;
+  color: var(--color-bleu-sombre);
+}
+
+h2{
+  font-family: "Caprasimo", serif;
+  font-style: normal;
+  font-size: 25px;
+  color: white
+}
+
+h3{
+  font-family: "Caprasimo", serif;
+  font-style: normal;
+  font-size: 22px;
+  color: var(--color-bleu-sombre);
+}
+
+h4{
+  font-family: "Caprasimo", serif;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--color-bleu-sombre)
+}
+
+strong{
+  font-size: 12px;
+  font-family: "Corben", serif;
+}
+
+.enigme {
+  width: 95%;                  /* prend 90% de la largeur */
+  margin: 0 auto;              /* centre horizontalement */
+  background-color: var(--color-white-background);   /* léger fond (optionnel) */
+  padding: 1rem;               /* espace intérieur */
+  border-radius: 8px;          /* bords arrondis */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* ombre légère */
+  text-align: center;          /* texte centré (optionnel) */
+}
+
+
+
+// BUTTONS
+
+button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 14px;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}

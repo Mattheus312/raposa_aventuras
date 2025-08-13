@@ -1,0 +1,25 @@
+<section class="hero is-fullheight is-flex is-justify-content-center is-align-items-center">
+  <div class="has-text-centered">
+
+    <div class="main-title">
+      <h1>A Raposa Aventura</h1>
+    </div>
+
+    <div  [ngClass]="'menu-button-' + displayButton[0].position" *ngIf="displayButton[0].display == true"> <!-- BOUTON #1 -->
+      <button (click)="nextButton(0)">{{displayButton[0].content}}</button>
+    </div>
+
+    <div [ngClass]="'menu-button-' + displayButton[1].position" *ngIf="displayButton[1].display == true"> <!-- BOUTON #2 -->
+      <button (click)="nextButton(1)">{{displayButton[1].content}}</button>
+    </div>
+
+    <div [ngClass]="'menu-button-' + displayButton[2].position" *ngIf="displayButton[2].display == true"> <!-- BOUTON #3 -->
+      <button (click)="nextButton(2)">{{displayButton[2].content}}</button>
+    </div>
+
+    <div [ngClass]="'menu-button-' + displayButton[3].position" *ngIf="displayButton[3].display == true"> <!-- BOUTON #4 -->
+      <button (click)="nextButton(3)">{{displayButton[3].content}}</button>
+    </div>
+      
+  </div>
+</section>

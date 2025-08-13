@@ -1,0 +1,228 @@
+
+<section class="hero is-fullheight is-flex is-justify-content-center is-align-items-center step">
+  <div class="has-text-centered">
+
+    <div class="main-title">
+      <h2>A Raposa Aventura</h2>
+    </div>
+
+    <div class="step-section" *ngIf="steps[0].display"> <!-- INTRODUCTION -->
+      <div class="step-title">
+        <h3>{{steps[0].nom}}</h3>
+      </div>
+      <div class="step-description">
+        <br>
+        <p>
+          Un grand jour implique de grandes activités !
+        </p>
+        <br>
+        <p>
+          Je t'emmène avec moi faire un tour de notre histoire et de 2/3 endroits sympas, histoire de se rappeler quelques bons souvenirs (y aura peut-être des trucs à grignoter sur le chemin).
+        </p>
+        <br>
+        <p>
+          Si t'es partante, je te laisse aller mettre un slip (t'as toujours pas le droit de sortir habillée comme ça) et cliquer sur ce petit bouton fort sympathique pour se lancer à l'aventure :
+        </p>
+        <br>
+        <br>
+        <div> <!-- BOUTON  -->
+          <button (click)="validateStep(0)">J'ai mis mon slip 🩲 </button>
+        </div>
+
+      </div>
+      <div class="step-content">
+
+      </div>
+
+    </div>
+
+    <div class="step-section" *ngIf="steps[1].display"> <!-- STEP 1 -->
+      <div class="step-title">
+        <h3>{{steps[1].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+        <p>
+          Commençons par le commencement : où est-ce que j'ai eu l'occasion de voir tes naseaux pour la première fois ?
+        </p>
+        <br>
+
+      </div>
+
+      <div class="step-content" *ngIf="steps[1].encours">
+        
+        <input type="text"
+              placeholder="Ta réponse bg"
+              class="minimal-input"
+              [(ngModel)]="reponseText">
+
+        <br><br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="checkResponseText(1)">C'est mon dernier mot ✅</button>
+        </div>
+      </div>
+
+      <div class="step-result" *ngIf="steps[1].validee">
+        <br>
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <br><br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(1)">Clique quand t'es arrivée 📍</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="step-section" *ngIf="steps[2].display"> <!-- STEP 2 -->
+      <div class="step-title">
+        <h3>{{steps[2].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+       
+        <p>
+          Rejoins cet endroit où on a passé notre première nuit et répond à l'énigme une fois arrivée.
+        </p>
+        
+      </div>
+
+      <div class="step-content" *ngIf="steps[2].encours">
+        <br>
+        <div class="enigme">
+           
+          <p>
+            Comme tu l'as si bien dit <strong> "maintenant tu as d'autres trous à t'occuper"</strong>.<br> Il y a 4 chiffres qui ont joué un rôle crucial pour m'en ouvrir les portes.
+          </p>
+          <br>
+          <p>
+            Lesquels?
+          </p>
+
+          <br>
+
+          <div class="pin-input">
+            <input type="text" maxlength="1" pattern="[0-9]*" [(ngModel)]="code[0]" (input)="focusNext($event, 1)" />
+            <input type="text" maxlength="1" pattern="[0-9]*" [(ngModel)]="code[1]" (input)="focusNext($event, 2)" />
+            <input type="text" maxlength="1" pattern="[0-9]*" [(ngModel)]="code[2]" (input)="focusNext($event, 3)" />
+            <input type="text" maxlength="1" pattern="[0-9]*" [(ngModel)]="code[3]" />
+          </div>
+                  
+          <div> <!-- BOUTON -->
+            <button (click)="checkCode(2)">Ça part 🔒</button>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="step-result" *ngIf="steps[2].validee">
+        <br>
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <p>Maintenant va au début de la rue Romarin (là où t'es allée à la pharmacie en tatanes)</p>
+        <br><br>
+
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(2)">Jissui 📍</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="step-section" *ngIf="steps[3].display"> <!-- STEP 3 -->
+      <div class="step-title">
+        <h3>{{steps[3].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+        <p>Ca commence à faire beaucoup de km tous les deux en voiture (et en van!). Est-ce que tu sauras mettre en pratique tes compétences de copilote jusqu'au prochain step ?</p>
+        
+      </div>
+
+      <div class="step-content" *ngIf="steps[3].encours">
+        <br>
+        <div class="enigme">
+          <br>
+          <p class="arrow-guide">↑  ↑  ↑  ←  →  ←  ↑  →  ↑  ←  ↑  ←  ↑ </p>
+          <br>
+          
+          <input type="text"
+              placeholder="On va manger quoi?"
+              class="minimal-input"
+              [(ngModel)]="reponseText">
+
+          <br><br>
+
+          <div> <!-- BOUTON -->
+            <button (click)="checkResponseText(3)">J'ai faim 🍴</button>
+          </div>
+        
+        </div>
+      </div>
+
+      <div class="step-result" *ngIf="steps[3].validee">
+        <br>
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <br>
+        <p>Pause pancakes bien méritée</p>
+        <br>
+
+
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(3)">J'ai fini de manger 🥞 </button>
+        </div>
+      </div>
+
+    </div>
+   
+    <div class="step-section" *ngIf="steps[4].display"> <!-- STEP 4 -->
+      <div class="step-title">
+        <h3>{{steps[4].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+        <p>J'ai jamais autant utilisé de pictos que depuis que je suis avec toi. On va voir si je les choisis bien.</p>
+        <br>
+        
+      </div>
+
+      <div class="step-content" *ngIf="steps[4].encours">
+        <p>Ca te fait penser à quel endroit ça :</p>
+        <br>
+    
+        <p>👩‍❤️‍👨 → 🏙️☀️ → 🥢🍜 → 🌳🎭 → 🌶️🥵</p>
+        <br><br>
+
+        <input type="text"
+            placeholder="Lâche ton meilleur guess "
+            class="minimal-input"
+            [(ngModel)]="reponseText">
+
+        <br><br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="checkResponseText(4)">Go 🎭</button>
+        </div>
+      </div>
+
+      <div class="step-result" *ngIf="steps[4].validee">
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <br>
+        <br>
+
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(4)">La suite </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

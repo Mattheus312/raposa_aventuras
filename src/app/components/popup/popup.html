@@ -1,0 +1,9 @@
+<div *ngIf="isVisible" class="popup-backdrop">
+  <div class="popup-box">
+    <h3>{{ title }}</h3>
+    <div class="popup-content">
+      <ng-content></ng-content>
+    </div>
+    <button (click)="close()">Fermer</button>
+  </div>
+</div>

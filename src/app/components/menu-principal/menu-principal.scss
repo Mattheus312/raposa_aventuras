@@ -1,0 +1,45 @@
+.menu-footer {
+  position: fixed;       /* reste toujours visible à l’écran */
+  bottom: 75%;          /* 10px du bas */
+  left: 50%;             /* point de référence horizontal */
+  transform: translateX(-50%); /* décalage pour centrer parfaitement */
+  text-align: center;    /* centre le texte à l’intérieur */
+  width: max-content;    /* largeur ajustée au texte */
+  font-size: 16px;
+}
+
+.menu-button-25 {
+  position: fixed;       /* reste toujours visible à l’écran */
+  bottom: 25%;          /* 10px du bas */
+  left: 50%;             /* point de référence horizontal */
+  transform: translateX(-50%); /* décalage pour centrer parfaitement */
+  text-align: center;    /* centre le texte à l’intérieur */
+  width: max-content;    /* largeur ajustée au texte */
+}
+
+.menu-button-75 {
+  position: fixed;       /* reste toujours visible à l’écran */
+  bottom: 75%;          /* 10px du bas */
+  left: 50%;             /* point de référence horizontal */
+  transform: translateX(-50%); /* décalage pour centrer parfaitement */
+  text-align: center;    /* centre le texte à l’intérieur */
+  width: max-content;    /* largeur ajustée au texte */
+}
+
+.menu-button-10 {
+  position: fixed;       /* reste toujours visible à l’écran */
+  bottom: 10%;          /* 10px du bas */
+  left: 50%;             /* point de référence horizontal */
+  transform: translateX(-50%); /* décalage pour centrer parfaitement */
+  text-align: center;    /* centre le texte à l’intérieur */
+  width: max-content;    /* largeur ajustée au texte */
+}
+
+.menu-button-20 {
+  position: fixed;       /* reste toujours visible à l’écran */
+  bottom: 20%;          /* 10px du bas */
+  left: 50%;             /* point de référence horizontal */
+  transform: translateX(-50%); /* décalage pour centrer parfaitement */
+  text-align: center;    /* centre le texte à l’intérieur */
+  width: max-content;    /* largeur ajustée au texte */
+}
