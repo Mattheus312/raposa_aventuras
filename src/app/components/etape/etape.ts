@@ -24,6 +24,7 @@ export class Etape implements OnInit {
     // Réinitialise les steps si nécessaire
     this.stepService.resetSteps();
 
+
     // Récupère les steps et initialise la propriété reponse si nécessaire
     this.steps = this.stepService.getSteps().map(step => ({
       ...step,
