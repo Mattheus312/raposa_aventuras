@@ -22,7 +22,7 @@ export class Etape implements OnInit {
 
   ngOnInit() {
     // Réinitialise les steps si nécessaire
-    this.stepService.resetSteps();
+    //this.stepService.resetSteps();
 
 
     // Récupère les steps et initialise la propriété reponse si nécessaire
