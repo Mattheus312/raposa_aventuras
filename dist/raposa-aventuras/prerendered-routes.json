@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/raposa_aventuras": {},
+    "/raposa_aventuras/etape": {},
+    "/raposa_aventuras/felicitation": {},
+    "/raposa_aventuras/menu": {},
+    "/raposa_aventuras/pub": {}
+  }
+}
