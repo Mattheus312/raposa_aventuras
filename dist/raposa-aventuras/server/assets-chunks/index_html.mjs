@@ -10,6 +10,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 <body><!--nghm-->
   <app-root ng-version="20.1.6" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-lancement _nghost-ng-c3499220827 ngh="0"><section _ngcontent-ng-c3499220827 class="hero is-fullheight is-flex is-justify-content-center is-align-items-center"><div _ngcontent-ng-c3499220827 class="has-text-centered"><div _ngcontent-ng-c3499220827 class="main-title"><h1 _ngcontent-ng-c3499220827>A Raposa Aventura</h1></div><div _ngcontent-ng-c3499220827 class="menu-footer"><p _ngcontent-ng-c3499220827>Ca va être (une) super (journée). </p></div></div></section></app-lancement><!----></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="main-QMQD4SYU.js" type="module"></script>
+<script src="main-GGF7RBJE.js" type="module"></script>
 
 <script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"0":[{"i":"c3499220827","r":1}]}}]}</script></body></html>`;
