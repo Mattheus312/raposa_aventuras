@@ -13,7 +13,17 @@ export const DEFAULT_STEPS: Step[] = [
   },
   {
     id: 1,
-    nom: '#1 - Là où tout commence',
+    nom: 'Mise en bouche',
+    description: "",
+    format: 'texte',
+    reponse: 'IKEA, pug, avoine',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 2,
+    nom: 'Là où tout commence',
     description: "",
     format: 'texte',
     reponse: 'Opera, Muses, Les Muses',
@@ -22,8 +32,8 @@ export const DEFAULT_STEPS: Step[] = [
     display: false
   },
   {
-    id: 2,
-    nom: '#2 - Tequila & tunning',
+    id: 3,
+    nom: 'Tequila & tunning',
     description: "",
     format: 'texte',
     reponse: '8523',
@@ -32,8 +42,8 @@ export const DEFAULT_STEPS: Step[] = [
     display: false
   },
   {
-    id: 3,
-    nom: '#3 - Copilote',
+    id: 4,
+    nom: 'Copilote',
     description: "",
     format: 'texte',
     reponse: 'Pancakes, pancake',
@@ -42,11 +52,21 @@ export const DEFAULT_STEPS: Step[] = [
     display: false
   },
   {
-    id: 4,
-    nom: '#4 - Kiffeuse de pictos va',
+    id: 5,
+    nom: 'Kiffeuse de pictos va',
     description: "",
     format: 'texte',
-    reponse: 'Célestins, théâtre',
+    reponse: 'Célestins',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 6,
+    nom: 'Leçon de piano',
+    description: "",
+    format: 'texte',
+    reponse: '',
     encours: false,
     validee : false,
     display: false

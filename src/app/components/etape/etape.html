@@ -38,7 +38,49 @@
 
     <div class="step-section" *ngIf="steps[1].display"> <!-- STEP 1 -->
       <div class="step-title">
-        <h3>{{steps[1].nom}}</h3>
+        <h3>#1 - {{steps[1].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+       <p>Commençons simplement : un classique chaud/froid qui va t'emmener à un petit cadeau.</p>
+       <br>
+      </div>
+
+      <div class="step-content" *ngIf="steps[1].encours">
+        <p> Une fois trouvé, devine le mot de passe pour aller à l'étape suivante.</p> 
+        <br>
+        <input type="text"
+              placeholder="Ta réponse bg"
+              class="minimal-input"
+              [(ngModel)]="reponseText">
+
+        <br><br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="checkResponseText(1)">C'est good pour moi ✅</button>
+        </div>
+       
+      </div>
+
+      <div class="step-result" *ngIf="steps[1].validee">
+        <br>
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <br>
+        <p>Maintenant que t'as compris comment ça va marcher, clique là la star : </p>
+
+        <br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(1)">Je suis à fond 🤸</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="step-section" *ngIf="steps[2].display"> <!-- STEP 2 -->
+      <div class="step-title">
+        <h3>#2 - {{steps[2].nom}}</h3>
       </div>
 
       <div class="step-description">
@@ -50,7 +92,7 @@
 
       </div>
 
-      <div class="step-content" *ngIf="steps[1].encours">
+      <div class="step-content" *ngIf="steps[2].encours">
         
         <input type="text"
               placeholder="Ta réponse bg"
@@ -60,25 +102,25 @@
         <br><br>
 
         <div> <!-- BOUTON -->
-          <button (click)="checkResponseText(1)">C'est mon dernier mot ✅</button>
+          <button (click)="checkResponseText(2)">C'est mon dernier mot ✅</button>
         </div>
       </div>
 
-      <div class="step-result" *ngIf="steps[1].validee">
+      <div class="step-result" *ngIf="steps[2].validee">
         <br>
         <p class="reponse">Et oui c'est bien joué !</p>
         <br><br>
 
         <div> <!-- BOUTON -->
-          <button (click)="nextStep(1)">Clique quand t'es arrivée 📍</button>
+          <button (click)="nextStep(2)">Clique quand t'es arrivée 📍</button>
         </div>
       </div>
 
     </div>
 
-    <div class="step-section" *ngIf="steps[2].display"> <!-- STEP 2 -->
+    <div class="step-section" *ngIf="steps[3].display"> <!-- STEP 3 -->
       <div class="step-title">
-        <h3>{{steps[2].nom}}</h3>
+        <h3>#3 - {{steps[3].nom}}</h3>
       </div>
 
       <div class="step-description">
@@ -90,7 +132,7 @@
         
       </div>
 
-      <div class="step-content" *ngIf="steps[2].encours">
+      <div class="step-content" *ngIf="steps[3].encours">
         <br>
         <div class="enigme">
            
@@ -112,13 +154,13 @@
           </div>
                   
           <div> <!-- BOUTON -->
-            <button (click)="checkCode(2)">Ça part 🔒</button>
+            <button (click)="checkCode(3)">Ça part 🔒</button>
           </div>
         
         </div>
       </div>
 
-      <div class="step-result" *ngIf="steps[2].validee">
+      <div class="step-result" *ngIf="steps[3].validee">
         <br>
         <p class="reponse">Et oui c'est bien joué !</p>
         <p>Maintenant va au début de la rue Romarin (là où t'es allée à la pharmacie en tatanes)</p>
@@ -126,15 +168,15 @@
 
 
         <div> <!-- BOUTON -->
-          <button (click)="nextStep(2)">Jissui 📍</button>
+          <button (click)="nextStep(3)">Jissui 📍</button>
         </div>
       </div>
 
     </div>
 
-    <div class="step-section" *ngIf="steps[3].display"> <!-- STEP 3 -->
+    <div class="step-section" *ngIf="steps[4].display"> <!-- STEP 4 -->
       <div class="step-title">
-        <h3>{{steps[3].nom}}</h3>
+        <h3>#4 - {{steps[4].nom}}</h3>
       </div>
 
       <div class="step-description">
@@ -143,11 +185,11 @@
         
       </div>
 
-      <div class="step-content" *ngIf="steps[3].encours">
+      <div class="step-content" *ngIf="steps[4].encours">
         <br>
         <div class="enigme">
           <br>
-          <p class="arrow-guide">↑  ↑  ↑  ←  →  ←  ↑  →  ↑  ←  ↑  ←  ↑ </p>
+          <p class="arrow-guide">⬆️ ⬆️ ⬆️ ⬅️ ➡️ ⬅️ ⬆️ ➡️ ⬆️ ⬅️ ⬆️ ⬅️ ⬆️</p>
           <br>
           
           <input type="text"
@@ -158,13 +200,13 @@
           <br><br>
 
           <div> <!-- BOUTON -->
-            <button (click)="checkResponseText(3)">J'ai faim 🍴</button>
+            <button (click)="checkResponseText(4)">J'ai faim 🍴</button>
           </div>
         
         </div>
       </div>
 
-      <div class="step-result" *ngIf="steps[3].validee">
+      <div class="step-result" *ngIf="steps[4].validee">
         <br>
         <p class="reponse">Et oui c'est bien joué !</p>
         <br>
@@ -174,15 +216,15 @@
 
 
         <div> <!-- BOUTON -->
-          <button (click)="nextStep(3)">J'ai fini de manger 🥞 </button>
+          <button (click)="nextStep(4)">J'ai fini de manger 🥞 </button>
         </div>
       </div>
 
     </div>
    
-    <div class="step-section" *ngIf="steps[4].display"> <!-- STEP 4 -->
+    <div class="step-section" *ngIf="steps[5].display"> <!-- STEP 5 -->
       <div class="step-title">
-        <h3>{{steps[4].nom}}</h3>
+        <h3>#5 - {{steps[5].nom}}</h3>
       </div>
 
       <div class="step-description">
@@ -192,7 +234,7 @@
         
       </div>
 
-      <div class="step-content" *ngIf="steps[4].encours">
+      <div class="step-content" *ngIf="steps[5].encours">
         <p>Ca te fait penser à quel endroit ça :</p>
         <br>
     
@@ -207,18 +249,50 @@
         <br><br>
 
         <div> <!-- BOUTON -->
-          <button (click)="checkResponseText(4)">Go 🎭</button>
+          <button (click)="checkResponseText(5)">Go 🎭</button>
         </div>
       </div>
 
-      <div class="step-result" *ngIf="steps[4].validee">
+      <div class="step-result" *ngIf="steps[5].validee">
         <p class="reponse">Et oui c'est bien joué !</p>
         <br>
         <br>
 
 
         <div> <!-- BOUTON -->
-          <button (click)="nextStep(4)">La suite </button>
+          <button (click)="nextStep(5)">Je suis aux Célestins 🎭</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="step-section" *ngIf="steps[6].display"> <!-- STEP 6 -->
+      <div class="step-title">
+        <h3>#5 - {{steps[6].nom}}</h3>
+      </div>
+
+      <div class="step-description">
+        <br>
+        <p>On n'est jamais allés au bout, mais je suis sûr que tu as quelques souvenirs d'un chouette morceu qu'on a appris au piano.</p>
+        <br>
+        
+      </div>
+
+      <div class="step-content" *ngIf="steps[6].encours">
+        <p>...</p>
+          <app-piano
+            [expectedSequence]="['E4','F4','G4','E5']"
+            (unlocked)="validateStep(6)"
+          ></app-piano>
+      </div>
+
+      <div class="step-result" *ngIf="steps[6].validee">
+        <p class="reponse">Et oui c'est bien joué !</p>
+        <br>
+        <br>
+
+        <div> <!-- BOUTON -->
+          <button (click)="nextStep(6)">La suite </button>
         </div>
       </div>
 

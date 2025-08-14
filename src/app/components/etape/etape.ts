@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Step } from '../../models/etape.model';
 import { StepService } from '../../services/step.service';
+import { Piano } from '../piano/piano';
 
 @Component({
   selector: 'app-etape',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, Piano],
   templateUrl: './etape.html',
   styleUrls: ['./etape.scss']
 })

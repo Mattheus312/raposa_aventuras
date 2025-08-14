@@ -1,0 +1,8 @@
+<div class="piano">
+  <div *ngFor="let note of notes" 
+       class="key" 
+       [class.black]="note.includes('#')"
+       (click)="playNote(note)">
+    {{note}}
+  </div>
+</div>
