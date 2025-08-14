@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1755115233787,
+  "timestamp": 1755115306523,
   "index": "https://Mattheus312.github.io/raposa_aventuras/index.csr.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://Mattheus312.github.io/raposa_aventuras/favicon.ico",
         "https://Mattheus312.github.io/raposa_aventuras/index.csr.html",
         "https://Mattheus312.github.io/raposa_aventuras/index.html",
-        "https://Mattheus312.github.io/raposa_aventuras/main-QMQD4SYU.js",
+        "https://Mattheus312.github.io/raposa_aventuras/main-GGF7RBJE.js",
         "https://Mattheus312.github.io/raposa_aventuras/manifest.webmanifest",
         "https://Mattheus312.github.io/raposa_aventuras/styles-WIDBLK5O.css"
       ],
@@ -51,9 +51,9 @@
     "https://Mattheus312.github.io/raposa_aventuras/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://Mattheus312.github.io/raposa_aventuras/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "https://Mattheus312.github.io/raposa_aventuras/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "https://Mattheus312.github.io/raposa_aventuras/index.csr.html": "9fa0b4362a696c9e48ff2c93e824f485c09d95ae",
-    "https://Mattheus312.github.io/raposa_aventuras/index.html": "9142f7a2f556fe1c25c080d1ea093571af107bca",
-    "https://Mattheus312.github.io/raposa_aventuras/main-QMQD4SYU.js": "bd85e16fb2bac145d5dd17a94cab4a824bb58de7",
+    "https://Mattheus312.github.io/raposa_aventuras/index.csr.html": "ad15be918be7097ad9b4cd4cfffbcd03df0f2d94",
+    "https://Mattheus312.github.io/raposa_aventuras/index.html": "343892b3f044d6bde498f7a8aa90f8b7ede7f1cd",
+    "https://Mattheus312.github.io/raposa_aventuras/main-GGF7RBJE.js": "c1aae63b71fb13ee1ef920b5ec25df4c66afa53d",
     "https://Mattheus312.github.io/raposa_aventuras/manifest.webmanifest": "163fa70d6276c81f1fbc01801de8787aa64a5551",
     "https://Mattheus312.github.io/raposa_aventuras/styles-WIDBLK5O.css": "ebb5e324fac354a4ab7cb69fa74013b8c2f6aa62"
   },
