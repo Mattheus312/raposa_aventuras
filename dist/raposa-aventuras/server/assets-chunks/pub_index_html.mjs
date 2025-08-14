@@ -10,6 +10,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 <body><!--nghm-->
   <app-root ng-version="20.1.6" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-pub ngh="0"><p>pub works!</p></app-pub><!----></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="main-GGF7RBJE.js" type="module"></script>
+<script src="main-QXEHMJHZ.js" type="module"></script>
 
 <script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"0":[{"i":"c909909910","r":1}]}}]}</script></body></html>`;

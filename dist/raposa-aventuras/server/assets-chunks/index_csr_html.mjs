@@ -11,6 +11,6 @@ export default `<!doctype html>
 <body ngcm="">
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="main-GGF7RBJE.js" type="module"></script></body>
+<script src="main-QXEHMJHZ.js" type="module"></script></body>
 </html>
 `;
