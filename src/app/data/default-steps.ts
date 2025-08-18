@@ -70,5 +70,115 @@ export const DEFAULT_STEPS: Step[] = [
     encours: false,
     validee : false,
     display: false
+  },
+  {
+    id: 7,
+    nom: 'Plif Plouf',
+    description: "",
+    format: 'texte',
+    reponse: '72',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 8,
+    nom: 'A l\'ancienne',
+    description: "",
+    format: 'texte',
+    reponse: 'Parc archéologique, Vieux Lyon',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 9,
+    nom: 'Mille-pattes',
+    description: "",
+    format: 'texte',
+    reponse: 'Mandelot, Rue Mandelot',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 10,
+    nom: 'Petit plaisir',
+    description: "",
+    format: 'texte',
+    reponse: '1020',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 11,
+    nom: 'Jolie coursive',
+    description: "",
+    format: 'texte',
+    reponse: 'Philibert Delorme',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 12,
+    nom: 'Le juste prix',
+    description: "",
+    format: 'texte',
+    reponse: '2231',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 13,
+    nom: 'Fish & Chips',
+    description: "",
+    format: 'texte',
+    reponse: 'FOOD-CRAFT BEER-WHISKY',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 14,
+    nom: 'On approche de la fin',
+    description: "",
+    format: 'texte',
+    reponse: 'Puppy yoga',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 15,
+    nom: 'Clap de fin',
+    description: "",
+    format: 'texte',
+    reponse: '',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 16,
+    nom: 'Fais tes affaires',
+    description: "",
+    format: 'texte',
+    reponse: '',
+    encours: false,
+    validee : false,
+    display: false
+  },
+  {
+    id: 17,
+    nom: 'Bon anniversaire !',
+    description: "",
+    format: 'texte',
+    reponse: '',
+    encours: false,
+    validee : false,
+    display: false
   }
 ];

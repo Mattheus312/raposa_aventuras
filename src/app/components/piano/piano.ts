@@ -15,23 +15,40 @@ export class Piano {
 
   notes = ['E4','F4','F#4','G4','G#4','A4','A#4','B4','C5','C#5','D5','D#5','E5'];
   userSequence: string[] = [];
+  userNote: string = '';
+  noteValidation: boolean[] = [false, false, false, false, false, false, false, false, false, false];
+  progress = 0;
   synth = new Tone.Synth().toDestination();
+
+  constructor() {
+    console.log(this.expectedSequence);
+    
+  }
 
   playNote(note: string) {
     this.synth.triggerAttackRelease(note, '8n');
-    this.userSequence.push(note);
+    //this.userSequence.push(note);
+    this.userNote = note;
     this.checkSequence();
+    //console.log(this.userSequence);
   }
 
   checkSequence() {
-    if (this.userSequence.length > this.expectedSequence.length) {
-      this.userSequence = [];
-    } else {
-      const isCorrect = this.userSequence.every((n,i) => n === this.expectedSequence[i]);
-      if (isCorrect && this.userSequence.length === this.expectedSequence.length) {
-        this.unlocked.emit(); // <-- notifie le parent
-        this.userSequence = [];
-      }
+
+    if(this.userNote == this.expectedSequence[this.progress]){
+      this.noteValidation[this.progress] = true;
+      this.progress++
     }
+    else{
+      this.noteValidation = new Array(10).fill(false);
+      this.progress = 0;
+    }
+
+    if(this.progress == this.expectedSequence.length){
+      this.unlocked.emit(); 
+      this.noteValidation = new Array(10).fill(false); 
+      this.progress = 0;
+    }
+
   }
 }

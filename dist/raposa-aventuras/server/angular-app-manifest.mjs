@@ -33,13 +33,13 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 124532, hash: '43e086aa7e70389b1051d5e254826fb004cded2e04cc0725f8aa41f0dc0364e8', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1136, hash: 'ea7b735078705390a0972060f89a9f407776387fc1f1611f58ede4417cd53c7f', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'pub/index.html': {size: 126685, hash: '9948eae2ece44457dce173e87a93a0176aa9fee0d21793aece768816d9fe22c1', text: () => import('./assets-chunks/pub_index_html.mjs').then(m => m.default)},
-    'etape/index.html': {size: 133672, hash: '5bfd19aab52ba96fc90f171e325b961900053508f46831931963c4bb433c35bc', text: () => import('./assets-chunks/etape_index_html.mjs').then(m => m.default)},
-    'felicitation/index.html': {size: 126712, hash: '729cb1ba06320f9b3998b354afcfc7a856a3fdf4900fd482355878ab27c03c80', text: () => import('./assets-chunks/felicitation_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 128737, hash: 'c083c522574b33d32c6a0193de834bb44d265605147f6dff81d3844c4d93d437', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'menu/index.html': {size: 131652, hash: '9ecb9c50c31c51714c256d2deb903e1d0e17f4296db6beaa9aa123190d8e1991', text: () => import('./assets-chunks/menu_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 124532, hash: 'dbe450782b091b5a0b5154a0ebc7f65fc6896933064a27e2080f6ced88e9fcd3', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1136, hash: '9b51fde50e9ff79019534b8e2f4349d34ec707d8db3ee5b3c3e324b4623ad690', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'etape/index.html': {size: 133722, hash: 'a5c263984cc1a897d8af90911d61fb0588bf648f25398b008f11970a3ece0693', text: () => import('./assets-chunks/etape_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 128737, hash: '5178e2b53e518388a2a2878a63e749268309fcd099a38351a49f20d7925d1a51', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'felicitation/index.html': {size: 126712, hash: '70eb2d5e38a16ab56cbd4d282ee45453b8ed5f6406db4bf3a3521251027ff505', text: () => import('./assets-chunks/felicitation_index_html.mjs').then(m => m.default)},
+    'pub/index.html': {size: 130245, hash: 'ec1e74496b14723ec774e9d2145a06c5c2a269317cf82310b6f5ac0016dc1792', text: () => import('./assets-chunks/pub_index_html.mjs').then(m => m.default)},
+    'menu/index.html': {size: 131652, hash: '56ae893f2ae5930bda3cbf3bd46141655dae5c7064698156fe11edbcf4549fe7', text: () => import('./assets-chunks/menu_index_html.mjs').then(m => m.default)},
     'styles-WIDBLK5O.css': {size: 694261, hash: 'VCgYaAKcuGY', text: () => import('./assets-chunks/styles-WIDBLK5O_css.mjs').then(m => m.default)}
   },
 };

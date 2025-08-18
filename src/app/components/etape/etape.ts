@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Step } from '../../models/etape.model';
 import { StepService } from '../../services/step.service';
 import { Piano } from '../piano/piano';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-etape',
@@ -18,20 +19,41 @@ export class Etape implements OnInit {
   steps: Step[] = [];
   reponseText: string = '';
   code: number[] = new Array(4);
+  gap: string = '';
+  bufferCode: string = '';
+  step15Choice: boolean = false;
+  complete : boolean = false;
+  listItems: string[] = ["1 petit pull", "2/3 paires de chaussettes", "2/3 culottes", "1 maillot de bains", "2/3 tshirt", "1 tenue correcte", "Affaires de toilettes", "Bouquin", "Chargeur iPhone", "Casquette"];
+  validated: boolean[] = this.listItems.map(() => false);
 
-  constructor(public stepService: StepService) {}
+  constructor(public stepService: StepService, public router: Router) {}
 
   ngOnInit() {
     // Réinitialise les steps si nécessaire
     //this.stepService.resetSteps();
 
 
-    // Récupère les steps et initialise la propriété reponse si nécessaire
     this.steps = this.stepService.getSteps().map(step => ({
       ...step,
-      reponse: step.reponse ?? '' // Toujours avoir une chaîne vide si undefined
+      reponse: step.reponse ?? '' 
     }));
 
+  }
+
+   toggleValidation(index: number) {
+    this.validated[index] = !this.validated[index];
+  }
+ 
+  reset(){
+    this.step15Choice = false;
+    this.gap = '';
+    this.stepService.resetSteps();
+    this.router.navigate(['/felicitation']); 
+    
+  }
+ 
+  nextStep15(){
+    this.step15Choice = false;
   }
 
   nextStep(id: number) {
@@ -62,9 +84,14 @@ export class Etape implements OnInit {
     if(index == 0){ //Pas d'affichage de résultats, passage direct à étape 1 depuis validaiton intro
       this.nextStep(index);
     }
-    
-
   }
+
+  validateStep15(index: number, choice: boolean){
+    this.step15Choice = choice;
+    this.validateStep(index);
+  }
+
+
 
   checkResponseText(index: number) {  
     const step = this.steps[index];
@@ -95,8 +122,6 @@ export class Etape implements OnInit {
     if(isContained){
      this.validateStep(index);
     }
-
-
   }
 
   focusNext(event: Event, position: number) {
@@ -112,11 +137,21 @@ export class Etape implements OnInit {
   checkCode(index: number) {
     const reponse = this.steps[index].reponse;
     const userCode = this.code.join('');
+    this.bufferCode = userCode;
 
     if (userCode === reponse) {
       this.validateStep(index);
+      this.code = new Array(4).fill(null);
+      this.bufferCode = '';
+      this.gap = '';
     }
     else{
+
+      const gap = parseFloat(reponse) > parseFloat(userCode) ? "plus" :
+                  parseFloat(reponse) < parseFloat(userCode) ? "moins" :
+                  '';
+      
+      this.gap = gap;
       this.code = new Array(4).fill(null);
     }
     

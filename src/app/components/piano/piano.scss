@@ -1,9 +1,39 @@
+.content {
+  display: flex;
+  flex-direction: column; /* empile les enfants verticalement */
+  align-items: center;    /* centre horizontalement */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+//INDICATEUR VALIDATION
+
+.progress {
+  display: flex;
+  justify-content: space-between; /* espace égal entre ronds */
+  align-items: center;            /* aligne verticalement au centre */
+  width: 100%;
+  height: 50px;                  /* fixe une hauteur claire */
+}
+
+.circle {
+  width: 40px;                    /* taille fixe du rond */
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;            /* centre le texte/emoji dans le rond */
+}
+//PIANO
+
 .piano {
   display: flex;
 }
 
+
 .key {
   width: 40px;
+  border-radius: 0 0 8px 8px;
   height: 150px;
   margin: 1px;
   background: white;

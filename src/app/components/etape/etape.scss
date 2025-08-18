@@ -22,9 +22,9 @@
 }
 
 .step-section {
-  position: fixed;
-  top: 70px; /* juste sous le bandeau */
-  bottom: 5%;
+  position: absolute; /* ou relative selon le contexte */
+  top: 70px;          /* juste sous le bandeau */
+  bottom: 5%;         /* espace en bas */
   left: 50%;
   transform: translateX(-50%);
   
@@ -33,7 +33,12 @@
 
   display: flex;
   flex-direction: column;
+
+  max-height: calc(100vh - 70px - 5%); /* limite la hauteur totale */
+  overflow-y: auto;                    /* permet de défiler si contenu trop long */
+  padding-bottom: 20px;                /* espace pour le bouton */
 }
+
 
 .arrow-guide{
   font-size: 18px;
@@ -55,6 +60,10 @@
 .reponse{
   color: var(--color-bleu-sombre);
   font-weight: 600;
+}
+
+.guess{
+  color: red;
 }
 
 // CHAMPS DE SAISIE TEXTE
@@ -88,6 +97,7 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  align-items: center; /* aligne les inputs et les symboles sur la même ligne */
   margin-bottom: 1rem;
 
   input {
@@ -106,4 +116,48 @@
       border-color: var(--color-bleu-pale);
     }
   }
+
+  .separator {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .euro {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+}
+
+// LIST
+.list {
+  display: flex;
+  width: 80%;
+  margin-left: 20px;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start; /* aligne la liste à gauche */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.bullet {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-bleu-sombre);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.list-item.validated .bullet {
+  background-color: var(--color-bleu-sombre);
 }

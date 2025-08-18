@@ -1,8 +1,17 @@
-<div class="piano">
-  <div *ngFor="let note of notes" 
-       class="key" 
-       [class.black]="note.includes('#')"
-       (click)="playNote(note)">
-    {{note}}
+<div class="content">
+  <div class="progress">
+    <div *ngFor="let note of noteValidation; let i = index" class="circle">
+      <span>
+        {{ noteValidation[i] ? '🟢' : '⚪' }}
+      </span>
+    </div>
+  </div>
+
+  <div class="piano">
+    <div *ngFor="let note of notes" 
+        class="key" 
+        [class.black]="note.includes('#')"
+        (click)="playNote(note)">
+    </div>
   </div>
 </div>
